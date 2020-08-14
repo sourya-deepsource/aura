@@ -1,10 +1,19 @@
 version = 1
 
 [[analyzers]]
+name = "docker"
+enabled = true
+
+[[analyzers]]
 name = "javascript"
 enabled = true
 
   [analyzers.meta]
-  ecma_version = "2020"
+  ecma_version = "2016"
   module_system = "commonjs"
-  environment = ["nodejs"]
+  environment = ["browser"]
+  style_guide = "airbnb"
+
+[[transformers]]
+name = "prettier"
+enabled = true
